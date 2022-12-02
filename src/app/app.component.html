@@ -1,0 +1,20 @@
+<div class="d-flex mt-5 flex-column align-items-center">
+  <h2 class="text-primary">Temperature Converter</h2>
+  <form [formGroup]="tempForm">
+    <app-input
+      (keyup)="handleOnChangeCel($event)"
+      formControlName="cel"
+      value="{{ cel }}"
+      type="number"
+      label="Celsius"
+    >
+    </app-input>
+    <app-input
+      (keyup)="handleOnChangeFah($event)"
+      formControlName="fah"
+      value="{{ fah  }}"
+      label="Fahrenheit"
+      type="number"
+    ></app-input>
+  </form>
+</div>
